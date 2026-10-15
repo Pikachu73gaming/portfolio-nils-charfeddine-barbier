@@ -1,0 +1,264 @@
+/* CSS pour la gestion des éléments communs au pages */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;   
+    scroll-padding-top: 4.5rem;    
+}
+
+body {
+    margin: 0;
+    padding: 0 1.25rem 3rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--couleur-texte);
+    background: var(--couleur-fond);
+}
+
+body > * {
+    max-width: var(--largeur-max);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.7rem, 5vw, 2.5rem);
+    line-height: 1.2;
+}
+
+h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    font-size: 1.6rem;
+    border-bottom: 3px solid var(--couleur-principale);
+}
+
+h3 {
+    margin-top: 1.8rem;
+    margin-bottom: 0.4rem;
+    font-size: 1.15rem;
+    color: var(--couleur-principale-fonce);
+}
+
+h4 {
+    margin-bottom: 0.4rem;
+    font-size: 1.2rem;
+}
+
+p {
+    margin-block: 0.6rem 1rem;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    max-width: none;
+    margin: 0 -1.25rem;
+    padding: 0.7rem 1.25rem;
+    background: var(--couleur-carte);
+    border-bottom: 1px solid var(--couleur-bordure);
+    box-shadow: var(--ombre);
+}
+
+nav a {
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--couleur-texte);
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: var(--couleur-principale);
+    color: var(--texte-sur-principale);
+}
+
+a {
+    color: var(--couleur-principale);
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: var(--couleur-principale-fonce);
+}
+
+.retour {
+    display: block;
+    width: fit-content;
+    margin-inline: max(0px, calc((100% - var(--largeur-max)) / 2));
+    margin-top: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--rayon);
+    background: var(--couleur-principale);
+    color: var(--texte-sur-principale);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.retour:hover {
+    background: var(--couleur-principale-fonce);
+    color: var(--texte-sur-principale);
+}
+
+.liens a,
+body > a:not(.retour) {
+    display: block;
+    margin-block: 0.6rem;
+    padding: 0.8rem 1rem;
+    background: var(--couleur-carte);
+    border: 1px solid var(--couleur-bordure);
+    border-left: 4px solid var(--couleur-principale);
+    border-radius: var(--rayon);
+    text-decoration: none;
+}
+
+.liens a:hover,
+body > a:not(.retour):hover {
+    box-shadow: var(--ombre);
+}
+
+body > li {
+    list-style: none;
+    margin-top: 1.4rem;
+    font-weight: 700;
+    color: var(--couleur-principale-fonce);
+}
+
+body > ul {
+    margin: 0.2rem auto 0.6rem;
+    padding: 0.8rem 1rem;
+    list-style: none;
+    background: var(--couleur-carte);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon);
+}
+
+li {
+    margin-block: 0.3rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-block: 1rem;
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+    background: var(--couleur-carte);
+}
+
+.tableau-defilant {
+    max-width: none;
+    margin: 1rem -1.25rem;
+    padding: 0 1.25rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    min-width: 1100px;
+    border-collapse: collapse;
+    background: var(--couleur-carte);
+    box-shadow: var(--ombre);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+th,
+td {
+    padding: 0.7rem 0.8rem;
+    border: 1px solid var(--couleur-bordure);
+    vertical-align: top;
+    text-align: left;
+}
+
+td {
+    width: 14%;
+    white-space: pre-line;
+}
+
+th {
+    background: var(--couleur-principale);
+    color: var(--texte-sur-principale);
+    font-weight: 600;
+}
+
+th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    min-width: 130px;
+}
+
+tr:first-child td {
+    font-weight: 600;
+}
+
+tr:nth-child(even) td {
+    background: var(--ligne-alternee);
+}
+
+td:has(> a) {
+    text-align: center;
+    white-space: normal;
+}
+
+td a {
+    display: inline-block;
+    padding: 0.1rem 0.7rem;
+    border-radius: 6px;
+    background: var(--badge);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+td a:hover {
+    background: var(--couleur-principale);
+    color: var(--texte-sur-principale);
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1rem;
+        padding: 0 1rem 2rem;
+    }
+
+    nav {
+        margin: 0 -1rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .tableau-defilant {
+        margin: 1rem -1rem;
+        padding: 0 1rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+}
+
+a:focus-visible {
+    outline: 3px solid var(--couleur-principale);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

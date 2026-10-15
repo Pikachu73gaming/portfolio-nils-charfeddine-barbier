@@ -1,0 +1,14 @@
+/* CSS page d'accueil*/
+
+:root {
+    --couleur-fond: #0f172a;
+    --couleur-carte: #1e293b;
+    --couleur-texte: #e5e7eb;
+    --couleur-principale: #60a5fa;
+    --couleur-principale-fonce: #93c5fd;
+    --couleur-bordure: #334155;
+    --ligne-alternee: #243247;
+    --badge: #1e3a5f;
+    --texte-sur-principale: #0f172a;
+    --ombre: 0 2px 10px rgba(0, 0, 0, 0.4);
+}

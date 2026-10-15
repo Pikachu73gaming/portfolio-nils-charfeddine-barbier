@@ -1,0 +1,37 @@
+/* CSS page preuves */
+
+:root {
+    --couleur-fond: #0f071e;
+    --couleur-carte: #1e103f;
+    --couleur-texte: #f3e8ff;
+    --couleur-principale: #a855f7;
+    --couleur-principale-fonce: #c084fc;
+    --couleur-bordure: #3b1c6c;
+    --ligne-alternee: #281452;
+    --badge: #581c87;
+    --texte-sur-principale: #ffffff;
+    --ombre: 0 4px 20px rgba(15, 7, 30, 0.7); 
+    --largeur-max: 900px;
+}
+
+h1 {
+    margin-top: 2.5rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--rayon);
+    background: var(--couleur-principale);
+    color: var(--texte-sur-principale);
+}
+
+h2 {
+    padding: 0.2rem 0 0.2rem 0.9rem;
+    border-bottom: none;
+    border-left: 6px solid var(--couleur-principale);
+}
+
+li {
+    padding: 0.4rem 0.8rem;
+    background: var(--couleur-carte);
+    border-left: 3px solid var(--couleur-principale);
+    border-radius: 4px;
+    list-style: none;
+}
